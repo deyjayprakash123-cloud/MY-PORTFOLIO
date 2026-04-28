@@ -82,12 +82,12 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
             <div className="flex justify-between items-start mb-3">
               <div className="text-sm font-mono text-cyan-400 tracking-widest">{project.category}</div>
               
-              {/* Source Code Button - visible on hover via group */}
+              {/* Source Code Button - visible on hover via group (desktop) and always visible on mobile */}
               <a 
                 href={project.source}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono text-[10px] px-3 py-1 rounded border border-cyan-500/30 text-cyan-400 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(0,255,194,0.5)] hover:bg-cyan-500/10 flex items-center gap-2"
+                className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono text-[10px] px-3 py-1 rounded border border-cyan-500/30 text-cyan-400 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(0,255,194,0.5)] hover:bg-cyan-500/10 flex items-center gap-2"
                 onClick={(e) => e.stopPropagation()} // Prevent card interaction when clicking link
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></div>

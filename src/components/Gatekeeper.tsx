@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { usePortfolio } from "@/context/PortfolioContext";
 import { TypeAnimation } from "react-type-animation";
+import Image from "next/image";
 
 export function GatekeeperUI() {
   const { setInterfaceMode, disassembled, setDisassembled } = usePortfolio();
@@ -18,13 +19,13 @@ export function GatekeeperUI() {
     <AnimatePresence>
       {!disassembled && (
         <motion.div
-          className="fixed inset-0 z-50 flex flex-col md:flex-row items-center justify-center md:justify-around pointer-events-none px-6"
+          className="fixed inset-0 z-50 flex flex-col md:flex-row items-center justify-center gap-6 md:justify-around pointer-events-none px-6 overflow-y-auto py-10 md:py-0"
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           {/* Biometric ID Panel (Left side) */}
           <motion.div
-            className="hidden md:flex flex-col items-center pointer-events-auto"
+            className="flex flex-col items-center pointer-events-auto w-[80%] md:w-auto shrink-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -58,11 +59,12 @@ export function GatekeeperUI() {
                 </div>
 
                 {/* Actual Image */}
-                <img 
+                <Image 
                   src={driveImageSrc} 
                   alt="Biometric ID" 
-                  className="w-full h-full object-cover mix-blend-screen opacity-80"
-                  crossOrigin="anonymous"
+                  fill
+                  priority
+                  className="object-cover mix-blend-screen opacity-80"
                 />
 
                 {/* Cyan Scanner Line */}

@@ -76,6 +76,43 @@ export function EducationLogs() {
           </MagneticCard>
         </div>
 
+        {/* HISTORICAL RECORDS (JEE & Schooling) */}
+        <div className="pt-4">
+          <h4 className="text-xs font-mono text-white/50 tracking-[0.2em] mb-4 uppercase">Historical Records</h4>
+          <div className="space-y-4">
+            {[
+              { level: "JEE Mains", score: "93 Percentile", status: "VERIFIED" },
+              { level: "Senior Secondary (12th)", details: "Jhadeswar International School", score: "75%", status: "VERIFIED" },
+              { level: "Secondary (10th)", details: "St. James Convent School", score: "85%", status: "VERIFIED" }
+            ].map((edu, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
+              >
+                <MagneticCard magneticPull={10} className="w-full">
+                  <div className="glass rounded-xl p-4 md:p-6 flex flex-col md:flex-row md:items-center justify-between border border-white/5 hover:border-cyan-500/20 transition-colors">
+                    <div className="flex items-start md:items-center gap-4">
+                      <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-cyan-500/50"></div>
+                      <div>
+                        <div className="text-[10px] font-mono text-cyan-500/70 mb-1 tracking-widest uppercase">[{edu.status}]</div>
+                        <h4 className="text-lg font-bold text-white mb-0.5">{edu.level}</h4>
+                        {edu.details && <p className="text-white/40 font-mono text-xs">{edu.details}</p>}
+                      </div>
+                    </div>
+                    
+                    <div className="mt-3 md:mt-0 text-left md:text-right">
+                      <div className="text-[10px] font-mono text-white/30 mb-1 uppercase tracking-widest">Score</div>
+                      <div className="text-lg font-mono text-cyan-400/80">{edu.score}</div>
+                    </div>
+                  </div>
+                </MagneticCard>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* CREDENTIAL VAULT (IBM Certs) */}
         <div>
           <h4 className="text-xs font-mono text-white/50 tracking-[0.2em] mb-4 uppercase">Credential Vault</h4>

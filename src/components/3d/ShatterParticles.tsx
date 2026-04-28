@@ -7,7 +7,7 @@ import { Points, PointMaterial } from "@react-three/drei";
 
 export function ShatterParticles() {
   const pointsRef = useRef<THREE.Points>(null);
-  const particleCount = 5000;
+  const particleCount = typeof window !== 'undefined' && window.innerWidth < 768 ? 2000 : 5000;
   
   // State to track if the explosion phase is over
   const explosionPhase = useRef(true);

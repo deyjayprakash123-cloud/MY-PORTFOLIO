@@ -14,6 +14,11 @@ const ibmCerts = [
     title: "Data Visualization for Real-Life Problems",
     issuer: "IBM Cognitive Classes",
     link: "https://drive.google.com/file/d/1-h8DTnLWEMleVxBqS9jgKzhT-K2v5Lg2/view?usp=drivesdk"
+  },
+  {
+    title: "Prompt Engineering",
+    issuer: "IBM Cognitive Classes",
+    link: "https://drive.google.com/file/d/1nnuSX4XF9Wi3sESKNFRLsBX4ivGZmKXt/view?usp=drive_link"
   }
 ];
 

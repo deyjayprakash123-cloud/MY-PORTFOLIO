@@ -24,6 +24,15 @@ const projects = [
     liveLabel: "[ ACCESS LIVE ENVIRONMENT ]"
   },
   {
+    title: "AEROX-WAR",
+    category: "Project Beta-II",
+    description: "A cinematic repository battle engine that performs side-by-side repo comparisons through immersive 3D visualization, real-time 3D rendered analysis, and interactive 3D graphical metric breakdowns.",
+    tech: ["3D Visualization", "Three.js", "Repo Analysis", "Data Rendering"],
+    source: "https://github.com/deyjayprakash123-cloud/aerox-war",
+    liveLink: "https://aerox-war.vercel.app/",
+    liveLabel: "[ ACCESS LIVE ENVIRONMENT ]"
+  },
+  {
     title: "FINGUARD (Frontend)",
     category: "Project Gamma",
     description: "A FinTech solution designed to empower the middle class by preventing debt traps and managing multiple loan structures through intelligent tracking.",

@@ -49,6 +49,15 @@ const projects = [
     source: "https://github.com/deyjayprakash123-cloud/ytdownload",
     liveLink: null,
     liveLabel: null
+  },
+  {
+    title: "AEROX OFFICE",
+    category: "Project Epsilon",
+    description: "A free all-in-one productivity platform — compress & convert files, create spreadsheets, documents, and PDFs, all from a single seamless interface. No sign-up, no cost, just power.",
+    tech: ["File Compression", "File Conversion", "Spreadsheets", "PDF Tools", "Documents"],
+    source: "https://github.com/deyjayprakash123-cloud/aerox-office",
+    liveLink: "https://aerox-office.vercel.app/",
+    liveLabel: "[ ACCESS LIVE ENVIRONMENT ]"
   }
 ];
 
